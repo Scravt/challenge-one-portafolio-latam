@@ -21,6 +21,10 @@ body {
     display: flex;
     justify-content: center;
 }
+p{
+    margin: 0px;
+    padding: 0px;
+}
 
 ol,
 ul,
@@ -32,17 +36,32 @@ a {
     text-decoration: none;
     color: var(--cor-de-link);
 }
-h3{
+h4{
+    font-size: 18px;
+    font-weight:bold;
+    color: #464646;
+    margin: 0px;
+    padding: 0px;
+
+}
+
+h3 {
     font-size: 22px;
-    font-weight:normal;
+    font-weight: normal;
     color: #464646;
 
 }
 
-.tudo{
-    width: 1136px;
+.tudo {
+    width: 100%;
     gap: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--cor-de-fundo);
+
 }
+
 /*En este desafío nosostros gustaríamos que ustedes intentaran utilizar la metodología BEM. 
 
 Lo que es el BEM?
@@ -96,22 +115,25 @@ nav ul.menu__list {
     height: 368px;
 }
 
-.menu__title{
+.menu__title {
     text-indent: 15px;
 }
+
 .menu__list .menu__list__item:last-child a {
     font-weight: bold;
 }
-.menu__list__item{
+
+.menu__list__item {
     width: max-content;
 }
 
 /*Sección Title*/
-.title__bio{
+.title__bio {
     font-weight: bold;
-    font-size: 52px;    
+    font-size: 52px;
 }
-.title__network{
+
+.title__network {
     display: flex;
     justify-content: flex-start;
     color: #000;
@@ -122,15 +144,17 @@ nav ul.menu__list {
     gap: 32px;
 
 }
-.title__subsection{
-    front-size:22px;
+
+.title__subsection {
+    front-size: 22px;
     text-decoration: none;
 }
 
-.title__profile{
-    width: 368px;
-    height: 368px;
+.title__profile {
+    width: 50%;
+    height: 80%;
     border-radius: 50%;
+    margin-left: 10px;
 }
 
 
@@ -142,81 +166,177 @@ nav ul.menu__list {
 
 /*Sección About*/
 
-.about{
+.about {
     height: 383px;
-    width: 1440px;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    background-color:#EAF2FD;
+    background-color: #EAF2FD;
     align-items: center;
     justify-content: center;
 }
 
-.about__container{
-    height: 225px;
+.about__container {
     width: 1136px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: baseline;
-    flex-direction: column;
-    background-color: #FFFFFF;
+    background-color: #F5F5F5;
+
 }
-.about__paragraph{
-    
+
+.about__title {
+    font-weight: bold;
+}
+
+.about__paragraph {
+    width: 50%;
+    background-color: #F5F5F5;
+
 }
 
 
 
 /*Sección Skills*/
-.skills__line{
+.skills{
+    height: 244px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.skills__line {
+    width: 100%;
     display: flex;
     justify-content: space-between;
+}
+.skills__title{
+    font-size: 38px;
+    font-weight: bold;
+    color: #464646;
+}
+
+.skills__box{
+    width: 224px;
+    height: 118px;
+
 }
 
 /*Sección Hobbies*/
-.hobbies__line{
+.hobbies{
+    width: 1136px;
+    height: 244px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.hobbies__title{
+    font-size: 38px;
+    font-weight: bold;
+    color: #464646;
+}
+
+.hobbies__line {
+    width: 100%;
     display: flex;
     justify-content: space-between;
 
 }
-section.hobbies {}
+
+.hobbies__box{
+    width: 224px;
+    height: 118px;
+
+}
 
 /* Experiencia Académica*/
 
-section.academic {}
+section.academic {
+    width: 100%;
+    height: 581px;
+    background-color: #EAF2FD;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+}
 
 .academic__courses {
     display: flex;
     justify-content: space-between;
+    gap: 16px;
 }
+
+.academic__courses__box{
+    width: 368px;
+    height: 286px;
+    background-color: #FFFFFF;
+}
+
+.academic__courses__list{
+    width: 368px;
+    height: 286px;
+    margin: 0px;
+    padding: 0pc;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 9px;
+    background-color:#EAF2FD;
+}
+
+
+.academic__courses__item__img {
+    width: auto;
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#FFFFFF;
+}
+
+.academic__courses__item__title{
+    font-size: 22px;
+    font-weight: bold;
+    color: #464646;
+}
+.cademic__courses__item__subtitle{
+    font-size: 18px;
+    color: #464646;
+
+}
+
 
 /* experiencia*/
 
 section.experience {}
 
-.experiencie__box:nth-child(even){
+.experiencie__box:nth-child(even) {
     display: flex;
     justify-content: space-between;
     flex-direction: row-reverse;
 }
-.experiencie__box:nth-child(odd){
+
+.experiencie__box:nth-child(odd) {
     display: flex;
     justify-content: space-between;
-    
+
 }
-  
-  
+
+
 
 /*Contacto*/
 
 section.formcontato {}
 
-.formcontato__contacto{
+.formcontato__contacto {
     display: flex;
     background-color: #EAF2FD;
 }
 
-.formcontato__form{
+.formcontato__form {
     display: flex;
     flex-direction: column;
     justify-content: center;
